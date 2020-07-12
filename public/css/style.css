@@ -1,0 +1,114 @@
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 10px;
+}
+table {
+    border-collapse: collapse;
+    width: 50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+th {
+    height: 50px;
+}
+input[type=text],input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+.nav-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 40%;
+    }
+.nav-menu > li.active{
+    background-color: red;
+}
+
+.nav-item {
+        float: left;
+    }
+
+.nav-item > a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+.nav-item > a:hover {
+        background-color: aqua;;
+    }
+
+.content{
+    padding: 20px;
+}
+.button-wrapper{
+    width: 30%;
+    margin-bottom: 10px;
+}
+.button {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+.button > a {
+    text-decoration: none;
+
+}
+.form-group{
+    margin-right:0;
+    margin-left:0;
+    width: 40%;
+}
+.error{
+    color: red;
+}
+.alert-success{
+    background-color: green;
+    color: black;
+    width: 20%;
+    margin: 50px;
+    padding: 20px;
+}
+.bodywork {
+    float: left;
+    width: 33%;
+    height: 40px;
+    text-align: center;
+    margin: 1px
+
+}
+.row > .active {
+    border: 1px solid black;
+    color: red;
+
+}
+.row {
+    width: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
