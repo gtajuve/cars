@@ -16,7 +16,7 @@ class ModelController extends Controller
      */
     public function index()
     {
-        $models = CarModel::all();
+        $models = CarModel::with('brand')->get();
         return view('models.index',compact('models'));
     }
 
@@ -64,7 +64,7 @@ class ModelController extends Controller
     {
         $brands = Brand::all();
 
-        $model = CarModel::find($id);
+        $model = CarModel::with('brand')->findOrFail($id);
         return view('models.create',compact(['model','brands']));
     }
 

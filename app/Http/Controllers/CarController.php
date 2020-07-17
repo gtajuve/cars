@@ -21,7 +21,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        $cars = Car::all();
+        $cars = Car::with(['brand','engine', 'model', 'bodywork'])->get();
         return view('cars.index',compact('cars'));
     }
 
@@ -71,7 +71,7 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        $car = Car::find($id);
+        $car = Car::with(['brand','engine', 'model', 'bodywork'])->findOrFail($id);
         $brands = Brand::all();
         $bodyworks = Bodywork::all();
         $engines = Engine::all();

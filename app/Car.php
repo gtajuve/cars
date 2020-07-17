@@ -29,17 +29,6 @@ class Car extends Model
         return $this->belongsTo('App\Bodywork');
     }
 
-    public static function getCarBrandsToArray(){
-        return convert_to_array('brand', self::select('brand')->distinct()->orderBy('brand')->get()->toArray());
-    }
-
-    public static function getCarModelsToArray(){
-        return convert_to_array('model', Car::select('model')->distinct()->orderBy('model')->get()->toArray());
-    }
-
-    public static function getCarEnginesToArray(){
-        return convert_to_array('engine', Car::select('engine')->distinct()->orderBy('engine')->get()->toArray());
-    }
 
     public static function searchByRequest($request){
 
